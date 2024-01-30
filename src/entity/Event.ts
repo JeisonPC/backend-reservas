@@ -7,18 +7,15 @@ import {
 } from "typeorm";
 
 @Entity()
-export class User {
+export class Event {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  firstName: string;
+  name: string;
 
   @Column()
-  lastName: string;
-
-  @Column()
-  age: number;
+  date: Date;
 
   @CreateDateColumn()
   createdAt: Date;
