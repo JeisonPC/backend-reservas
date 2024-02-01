@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm";
-import { User } from "../entity/User";
+import { Reservation } from "../entity/Reservation";
 import { Event } from "../entity/Event";
 
 
@@ -12,7 +12,7 @@ export default new DataSource({
   database: "postgres",
   synchronize: true,
   logging: false,
-  entities: [User, Event],
+  entities: [Reservation, Event],
   migrations: [],
   subscribers: [],
 })

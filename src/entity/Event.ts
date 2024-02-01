@@ -14,12 +14,19 @@ export class Event {
   @Column()
   name: string;
 
+  @Column({nullable: false})
+  description: string;
+
   @Column()
   date: Date;
+
+  @Column()
+  availablePositions: number;
 
   @CreateDateColumn()
   createdAt: Date;
 
   @UpdateDateColumn()
   updatedAt: Date;
+  reservations: any;
 }

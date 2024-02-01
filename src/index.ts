@@ -2,6 +2,8 @@ import "reflect-metadata";
 import express from "express";
 import database from "./config/database";
 import EventRoutes from "./events/events.routes";
+import ReservationRoutes from "./reservations/reservation.routes"
+
 
 const app = express();
 
@@ -13,6 +15,7 @@ database.initialize()
   .catch(console.error)
 
 app.use("/api/v1/", EventRoutes);
+app.use("/api/v1/", ReservationRoutes);
 
 app.listen(3000, () => {
   console.log("App en el puertoo:3000");
